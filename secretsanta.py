@@ -53,7 +53,7 @@ def send_email(receiver_email, recipient_name,event_datetime ):
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         server.login(EMAIL, PASSWORD)
-        server.sendmail("myra.s.tariq@gmail.com", receiver_email, text)
+        server.sendmail(EMAIL, receiver_email, text)
         server.quit()
         logging.info("Email has been sent to participants")
     except Exception as e:
